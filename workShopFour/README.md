@@ -1,21 +1,9 @@
-# Ödev Başlığı
+# Ödev Projem
 
-Ödevinizle ilgili bir giriş metni buraya yazılabilir.
+Aşağıda, ödev projeme ait ekran görüntüleri bulunmaktadır:
 
-## Resim 1 Başlığı
+<img src="basla.jpg" alt="Ekran Görüntüsü 1" width="400"/>
 
-![Resim 1 Açıklaması](basla.jpg)
+<img src="oyun.jpg" alt="Ekran Görüntüsü 2" width="400"/>
 
-Resim 1 ile ilgili açıklamalarınızı buraya yazabilirsiniz.
-
-## Resim 2 Başlığı
-
-![Resim 2 Açıklaması](oyun.jpg)
-
-Resim 2 ile ilgili açıklamalarınızı buraya yazabilirsiniz.
-
-## Resim 3 Başlığı
-
-![Resim 3 Açıklaması](sonuc.jpg)
-
-Resim 3 ile ilgili açıklamalarınızı buraya yazabilirsiniz.
+<img src="sonuc.jpg" alt="Ekran Görüntüsü 3" width="400"/>
