@@ -1,6 +1,6 @@
-# Ödev Projem
+# WorkShop 02.11.2023
 
-Aşağıda, ödev projeme ait ekran görüntüleri yan yana bulunmaktadır:
+Aşağıda, 02.11.2023 tarihli workshop projeme ait ekran görüntüleri bulunmaktadır:
 
 <p float="left">
   <img src="basla.jpg" alt="Ekran Görüntüsü 1" width="300"/>
