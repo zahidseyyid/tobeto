@@ -1,16 +1,21 @@
-# introapp2
+# Ödev Başlığı
 
-A new Flutter project.
+Ödevinizle ilgili bir giriş metni buraya yazılabilir.
 
-## Getting Started
+## Resim 1 Başlığı
 
-This project is a starting point for a Flutter application.
+![Resim 1 Açıklaması](basla.tiff)
 
-A few resources to get you started if this is your first Flutter project:
+Resim 1 ile ilgili açıklamalarınızı buraya yazabilirsiniz.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Resim 2 Başlığı
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Resim 2 Açıklaması](oyun.tiff)
+
+Resim 2 ile ilgili açıklamalarınızı buraya yazabilirsiniz.
+
+## Resim 3 Başlığı
+
+![Resim 3 Açıklaması](sonuc.tiff)
+
+Resim 3 ile ilgili açıklamalarınızı buraya yazabilirsiniz.
