@@ -1,7 +1,12 @@
+// QuestionModel sınıfı içinde
 class QuestionModel {
-  String? question;
-  Map<String, bool>? answer;
+  final String questionText;
+  final Map<String, bool> answers;
 
-  // Creating the constructor
-  QuestionModel(this.question, this.answer);
+  QuestionModel({required this.questionText, required this.answers});
+
+  // Doğru cevabı almak için bir getter eklenebilir
+  String get correctAnswer {
+    return answers.entries.firstWhere((element) => element.value, orElse: () => const MapEntry("", false)).key;
+  }
 }

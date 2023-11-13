@@ -2,8 +2,8 @@ import '../models/question_model.dart';
 
 List<QuestionModel> questions = [
   QuestionModel(
-    "Flutter varsayılan state yönetimi nedir?",
-    {
+    questionText: "Flutter varsayılan state yönetimi nedir?",
+    answers: {
       "GetX": false,
       "Provider": false,
       "setState": true,
@@ -11,8 +11,8 @@ List<QuestionModel> questions = [
     },
   ),
   QuestionModel(
-    "Flutter'i kim geliştirdi?",
-    {
+    questionText: "Flutter'i kim geliştirdi?",
+    answers: {
       "Facebook": false,
       "Google": true,
       "Microsoft": false,
@@ -20,8 +20,8 @@ List<QuestionModel> questions = [
     },
   ),
   QuestionModel(
-    "Hangisi Flutter'da layout widget'ı değil?",
-    {
+    questionText: "Hangisi Flutter'da layout widget'ı değil?",
+    answers: {
       "Column": false,
       "Row": false,
       "Container": false,
@@ -29,17 +29,17 @@ List<QuestionModel> questions = [
     },
   ),
   QuestionModel(
-    "Flutter'da popüler state yönetimi nedir?",
-    {
+    questionText: "Flutter'da popüler state yönetimi nedir?",
+    answers: {
       "HTTP": false,
-      "provider": true,
+      "Provider": true,
       "url_launcher": false,
       "flutter_svg": false,
     },
   ),
   QuestionModel(
-    "Flutter'da animasyonu başlatan widget?",
-    {
+    questionText: "Flutter'da animasyonu başlatan widget?",
+    answers: {
       "Animator": false,
       "AnimationController": true,
       "AnimationBuilder": false,
@@ -47,17 +47,17 @@ List<QuestionModel> questions = [
     },
   ),
   QuestionModel(
-    "Stateless ile StatefulWidget farkı nedir?",
-    {
-      "Dinamik": false,
-      "Durum korur": true,
-      "Durum tutar": false,
-      "Yalnızca statik": false,
+    questionText: "StatelessWidget ile StatefulWidget arasındaki temel fark nedir?",
+    answers: {
+      "StatelessWidget durum değişikliklerini takip eder": false,
+      "StatefulWidget yeniden oluşturulabilir ve durumunu koruyabilir": true,
+      "StatelessWidget durumunu koruyabilir": false,
+      "StatefulWidget durum değişikliklerini takip edemez": false,
     },
   ),
   QuestionModel(
-    "Hangisi Flutter'da state yönetimi değil?",
-    {
+    questionText: "Hangisi Flutter'da state yönetimi için kullanılan bir paket değildir?",
+    answers: {
       "Bloc": false,
       "MobX": false,
       "Redux": false,
@@ -65,8 +65,8 @@ List<QuestionModel> questions = [
     },
   ),
   QuestionModel(
-    "Flutter'da sayfa navigasyon widget'ı?",
-    {
+    questionText: "Flutter'da sayfa navigasyonu için hangi widget kullanılır?",
+    answers: {
       "MaterialApp": false,
       "Navigator": true,
       "AppBar": false,
@@ -74,8 +74,8 @@ List<QuestionModel> questions = [
     },
   ),
   QuestionModel(
-    "Flutter'da HTTP istekleri için paket?",
-    {
+    questionText: "Flutter'da HTTP istekleri için yaygın kullanılan paket hangisidir?",
+    answers: {
       "http": true,
       "socket": false,
       "request": false,
@@ -83,8 +83,8 @@ List<QuestionModel> questions = [
     },
   ),
   QuestionModel(
-    "Flutter'da sınırsız boyutlu kutu?",
-    {
+    questionText: "Flutter'da sınırsız boyutlu bir kutu nasıl oluşturulur?",
+    answers: {
       "UnboundedBox": false,
       "InfiniteBox": false,
       "SizedBox.expand": true,

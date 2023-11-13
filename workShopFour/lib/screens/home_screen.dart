@@ -1,4 +1,4 @@
-import 'package:cheavbellaQuiz/screens/quiz_screen.dart';
+import 'package:cheavbella_quiz/screens/quiz_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {

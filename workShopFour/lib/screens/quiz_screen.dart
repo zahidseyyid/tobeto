@@ -1,4 +1,4 @@
-import 'package:cheavbellaQuiz/screens/result_screen.dart';
+import 'package:cheavbella_quiz/screens/result_screen.dart';
 import 'package:flutter/material.dart';
 import '../data/questions.dart';
 
@@ -16,10 +16,13 @@ class _QuizState extends State<QuizScreen> {
   final PageController _controller = PageController(initialPage: 0);
   bool isPressed = false;
 
+  Map<int, int> selectedAnswers = {};
+  Color selectAnswer = Colors.grey;
   Color trueAnswer = Colors.green;
   Color wrongAnswer = Colors.red;
   Color buttonControl = Colors.white;
   int score = 0;
+  Map<int, String> userAnswers = {};
 
   @override
   Widget build(BuildContext buildContext) {
@@ -62,7 +65,7 @@ class _QuizState extends State<QuizScreen> {
                   height: 16.0,
                 ),
                 Text(
-                  questions[index].question!,
+                  questions[index].questionText,
                   style: const TextStyle(
                     fontSize: 30.0,
                     fontWeight: FontWeight.w400,
@@ -72,34 +75,32 @@ class _QuizState extends State<QuizScreen> {
                 const SizedBox(
                   height: 35.0,
                 ),
-                for (int i = 0; i < questions[index].answer!.length; i++)
+                for (int i = 0; i < questions[index].answers.length; i++)
                   Container(
-                    width: double.infinity,
-                    margin: const EdgeInsets.only(bottom: 25.0),
+                    margin: const EdgeInsets.symmetric(vertical: 10.0),
                     child: MaterialButton(
-                      shape: const StadiumBorder(),
-                      color: isPressed
-                          ? questions[index].answer!.entries.toList()[i].value
-                          ? trueAnswer
-                          : wrongAnswer
+                      color: selectedAnswers[index] == i
+                          ? selectAnswer
                           : buttonControl,
-                      padding: EdgeInsets.symmetric(vertical: 20.0),
-                      onPressed: isPressed
-                          ? () {}
-                          : () {
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      minWidth: 200.0,
+                      height: 50.0,
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 10.0, horizontal: 15.0),
+                      onPressed: () {
                         setState(() {
-                          isPressed = true;
+                          selectedAnswers[index] = i;
+                          userAnswers[index] =
+                              questions[index].answers.keys.toList()[i];
                         });
-                        if (questions[index].answer!.entries.toList()[i].value) {
+                        if (questions[index].answers.values.toList()[i]) {
                           score += 10;
-                        } else {
-                          setState(() {
-                            buttonControl = wrongAnswer;
-                          });
                         }
                       },
                       child: Text(
-                        questions[index].answer!.keys.toList()[i],
+                        questions[index].answers.keys.toList()[i],
                         style: const TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.bold,
@@ -115,29 +116,30 @@ class _QuizState extends State<QuizScreen> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     OutlinedButton(
-                      onPressed: isPressed
-                          ? index + 1 == questions.length
+                      onPressed: selectedAnswers.containsKey(index)
                           ? () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    ResultScreen(score)));
-                      }
-                          : () {
-                        _controller.nextPage(
-                            duration:
-                            const Duration(milliseconds: 500),
-                            curve: Curves.linear);
-                        setState(() {
-                          isPressed = false;
-                        });
-                      }
+                              if (index + 1 == questions.length) {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => ResultScreen(
+                                        score, userAnswers, questions),
+                                  ),
+                                );
+                              } else {
+                                _controller.nextPage(
+                                    duration: const Duration(milliseconds: 500),
+                                    curve: Curves.linear);
+                                setState(() {
+                                  isPressed = false;
+                                });
+                              }
+                            }
                           : null,
                       style: OutlinedButton.styleFrom(
                         shape: const StadiumBorder(),
                         side:
-                        const BorderSide(color: Colors.orange, width: 4.0),
+                            const BorderSide(color: Colors.orange, width: 4.0),
                       ),
                       child: Text(
                         index + 1 == questions.length
