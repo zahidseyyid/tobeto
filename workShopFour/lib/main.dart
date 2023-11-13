@@ -1,5 +1,4 @@
 import 'package:cheavbellaQuiz/screens/home_screen.dart';
-import 'package:cheavbellaQuiz/screens/result_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,10 +9,3 @@ void main() {
     ),
   );
 }
-
-// Stateless Widget
-
-
-
-// Stateful Widget
-
