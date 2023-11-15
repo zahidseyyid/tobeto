@@ -55,7 +55,7 @@ class _NewExpenseState extends State<NewExpense> {
           Text(
             selectedDate == null
                 ? "Tarih Seçiniz"
-                : DateFormat('dd/MM/yyyy').format(selectedDate!),
+                : DateFormat('dd.MM.yyyy').format(selectedDate!),
           ),
           Padding(
             padding: const EdgeInsets.all(20.0),
@@ -63,7 +63,7 @@ class _NewExpenseState extends State<NewExpense> {
               onPressed: () {
                 // Tarihi formatlayarak bir string'e dönüştürün
                 String formattedDate = selectedDate != null
-                    ? DateFormat('dd/MM/yyyy').format(selectedDate!)
+                    ? DateFormat('dd.MM.yyyy').format(selectedDate!)
                     : "Tarih Seçilmedi";
           
                 // Şimdi formattedDate değişkeni istediğiniz formatta
