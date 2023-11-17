@@ -25,7 +25,7 @@ class ExpenseItem extends StatelessWidget {
         ),
         leading: CircleAvatar(
           backgroundColor: Colors.blueAccent,
-          child: Icon(Icons.account_balance_wallet, color: Colors.white),
+          child: Icon(categoryIcons[expense.category], color: Colors.white),
         ),
       ),
     );
