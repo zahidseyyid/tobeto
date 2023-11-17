@@ -10,6 +10,10 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
+void _updateExpenses() {
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,16 +24,16 @@ class _MainPageState extends State<MainPage> {
           "ExpenseApp",
           style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
         ),
-        elevation: 0,
         actions: [
           IconButton(
             icon: const Icon(Icons.add, color: Colors.white),
             onPressed: () {
               showModalBottomSheet(
-                  context: context,
-                  builder: (ctx) {
-                    return NewExpense();
-                  });
+                context: context,
+                builder: (ctx) {
+                  return NewExpense(onExpenseAdded: _updateExpenses);
+                },
+              );
             },
           ),
         ],

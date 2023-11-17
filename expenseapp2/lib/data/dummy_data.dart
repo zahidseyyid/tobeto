@@ -1,6 +1,6 @@
 import 'package:expense_app/models/expense.dart';
 
-final List<Expense> dummyExpenses = [
+List<Expense> dummyExpenses = [
   Expense(name: "Yemek", price: 500, date: DateTime.now(), category: Category.yemek),
   Expense(name: "Fatura Ödemesi", price: 200.0, date: DateTime.now(), category: Category.fatura),
   Expense(name: "Akaryakıt", price: 120.0, date: DateTime.now(), category: Category.ulasim),
