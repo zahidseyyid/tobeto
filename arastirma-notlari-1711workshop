@@ -1,0 +1,22 @@
+GridView Widget:
+
+GridView, öğeleri bir grid (ızgara) biçiminde yerleştirmek için kullanılır.
+GridView.count() kullanımı, satır veya sütun sayısını belirlemenizi sağlar.
+Örnek: 2 sütunlu ve her biri indexlerini gösteren 100 widget içeren bir grid oluşturabilirsiniz.
+
+GoogleFonts Kullanımı:
+
+Google Fonts, farklı fontları kullanmak için Flutter'da bir paket olarak bulunur.
+Önce pubspec.yml'e google_fonts: ^2.1.0 eklenir, sonra import 'package:google_fonts/google_fonts.dart'; ile projeye dahil edilir.
+Belirli bir widget için veya tüm uygulama teması için farklı fontlar kullanılabilir.
+
+Container Widget ve Decorationlar:
+
+Container widget'ının BoxDecoration özelliği, arka planı renklendirme, gradyan uygulama gibi görsel düzenlemeler yapmanızı sağlar.
+Örnek: Kırmızı renkli bir arka plan veya kırmızıdan sarıya gradyanlı bir arka plan uygulayabilirsiniz.
+
+InkWell Classı:
+
+InkWell, dokunma etkileşimlerine tepki olarak görsel bir "splash" efekti gösteren bir widget'tır.
+Material widget'ı altında kullanılmalı ve onTap gibi bir jest callback'i eklenmeli.
+Highlight ve splash renkleri özelleştirilebilir, ayrıca borderRadius ile kenarları yuvarlatılabilir.
