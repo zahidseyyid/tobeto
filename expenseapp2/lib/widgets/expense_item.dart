@@ -1,3 +1,4 @@
+import 'package:expense_app/constants/colors.dart'; 
 import 'package:flutter/material.dart';
 import 'package:expense_app/models/expense.dart';
 import 'package:intl/intl.dart';
@@ -9,6 +10,9 @@ class ExpenseItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    
+    final theme = Theme.of(context);
+
     return Card(
       elevation: 3,
       margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 7),
@@ -16,16 +20,19 @@ class ExpenseItem extends StatelessWidget {
         contentPadding: const EdgeInsets.symmetric(vertical: 10, horizontal: 15),
         title: Text(
           expense.name,
-          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blueGrey),
+          style: theme.textTheme.titleLarge, 
         ),
-        subtitle: Text("${expense.price} ₺"),
+        subtitle: Text(
+          "${expense.price} ₺",
+          style: theme.textTheme.titleMedium, 
+        ),
         trailing: Text(
           DateFormat('dd.MM.yyyy').format(expense.date),
-          style: TextStyle(color: Colors.grey[600]),
+          style: theme.textTheme.titleMedium, 
         ),
         leading: CircleAvatar(
-          backgroundColor: Colors.blueAccent,
-          child: Icon(categoryIcons[expense.category], color: Colors.white),
+          backgroundColor: circleColor, 
+          child: Icon(categoryIcons[expense.category], color: iconColor), 
         ),
       ),
     );
