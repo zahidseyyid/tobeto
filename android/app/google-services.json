@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "22811831062",
+    "project_id": "fir-work-56f58",
+    "storage_bucket": "fir-work-56f58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:22811831062:android:db0254565ade038c0f7e37",
+        "android_client_info": {
+          "package_name": "com.example.firebase_work"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqGUSAOmAR9cBQWgx1giv-AlBwyi_bpjg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
