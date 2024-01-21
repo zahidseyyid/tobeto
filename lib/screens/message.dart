@@ -16,6 +16,8 @@ class MessageWidget extends StatelessWidget {
     return Container(
       alignment: isMe ? Alignment.centerRight : Alignment.centerLeft,
       child: Column(
+        crossAxisAlignment:
+            isMe ? CrossAxisAlignment.end : CrossAxisAlignment.start,
         children: [
           Card(
             margin: const EdgeInsets.all(8.0),
